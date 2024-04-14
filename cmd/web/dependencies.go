@@ -3,7 +3,7 @@ package web
 import (
 	"github.com/jprino77/go-poc/internal/app"
 	"github.com/jprino77/go-poc/internal/handler"
-	"github.com/jprino77/go-poc/internal/rest"
+	"github.com/jprino77/go-poc/internal/repository/rest"
 )
 
 type Dependencies struct {

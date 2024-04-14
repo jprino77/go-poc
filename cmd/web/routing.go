@@ -1,7 +1,7 @@
 package web
 
 import (
-	"github.com/jprino77/go-poc/cmd/web/middlewere"
+	"github.com/jprino77/go-poc/cmd/web/middleware"
 	"net/http"
 )
 
@@ -15,9 +15,9 @@ func InitRoutes(dependencies *Dependencies) http.Handler {
 }
 
 func addMiddlewares(handler http.Handler) http.Handler {
-	contentType := middlewere.NewResponseHeader(handler, "Content-Type", "application/json")
-	customType := middlewere.NewResponseHeader(contentType, "X-Custom-Header", "custom")
-	logger := middlewere.NewLogger(customType)
+	contentType := middleware.NewResponseHeader(handler, "Content-Type", "application/json")
+	customType := middleware.NewResponseHeader(contentType, "X-Custom-Header", "custom")
+	logger := middleware.NewLogger(customType)
 
 	return logger
 }

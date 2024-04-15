@@ -59,3 +59,9 @@ Esto generará un archivo `mock_service.go` en el paquete `service` que contiene
 ## Stack
 
 - Go 1.22
+
+## Arquitectura
+
+La aqrquitectura de la app esta basada en parte en:
+
+- https://medium.com/sellerapp/golang-project-structuring-ben-johnson-way-2a11035f94bc

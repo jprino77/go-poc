@@ -39,7 +39,7 @@ Luego, puedes generar un mock para una interfaz en tu código. Por ejemplo, supo
 mockgen -source=internal/domain/pokemon.go -destination=mocks/pokemon.go
 ```
 
-Esto generará un archivo `mock_service.go` en el paquete `service` que contiene un mock para la interfaz `UserService`. Luego, puedes utilizar este mock en tus pruebas.
+Esto generará un archivo `pokemon.go` en el paquete `mock_domain` que contiene un mock para la interfaz `PokemonSrv`. Luego, puedes utilizar este mock en tus pruebas.
 
 ## Dependencias usadas
 

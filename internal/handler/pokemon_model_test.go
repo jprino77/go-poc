@@ -16,7 +16,7 @@ func Test_fromDomain(t *testing.T) {
 		want *pokemonResponse
 	}{
 		{
-			name: "Should convert a domain pokemon to a response pokemon",
+			name: "Convert a domain pokemon to a response pokemon",
 			args: args{
 				pokemon: *domain.NewPokemon(1, "bulbasaur", 1),
 			},

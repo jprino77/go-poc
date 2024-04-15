@@ -37,7 +37,7 @@ func TestNewPokemonHandler(t *testing.T) {
 		want *PokemonHandler
 	}{
 		{
-			name: "Should return a new PokemonHandler instance",
+			name: "Create new PokemonHandler instance",
 			args: args{pokemonSrv: srv},
 			want: &PokemonHandler{pokemonSrv: srv},
 		},
@@ -63,7 +63,7 @@ func TestPokemonHandler_GetPokemonById(t *testing.T) {
 		wantCode int
 	}{
 		{
-			name: "Given a valid pokemon id, it should return the pokemon",
+			name: "Return the pokemon when the id is valid",
 			args: args{id: "1"},
 			mock: func(d *handlerDependencies) {
 				d.pokemonSrv.EXPECT().
@@ -74,7 +74,7 @@ func TestPokemonHandler_GetPokemonById(t *testing.T) {
 			wantCode: 200,
 		},
 		{
-			name: "Given an invalid pokemon id, it should return an error",
+			name: "Return an error when the id is invalid",
 			args: args{id: "invalid"},
 			mock: func(d *handlerDependencies) {
 				d.pokemonSrv.EXPECT().

@@ -31,7 +31,7 @@ func TestNewPokemonService(t *testing.T) {
 		want *PokemonService
 	}{
 		{
-			name: "Should return a new PokemonService instance",
+			name: "Create a new PokemonService instance",
 			args: args{
 				pokemonRepository: repository,
 			},
@@ -63,7 +63,7 @@ func TestPokemonService_GetPokemonBy(t *testing.T) {
 		mock    func(pokemonServiceDependencies)
 	}{
 		{
-			name: "Given a valid pokemon id, it should return the pokemon",
+			name: "Return the pokemon when the id is valid",
 			args: args{
 				ctx: context.Background(),
 				id:  1,

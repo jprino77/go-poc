@@ -21,7 +21,7 @@ func TestNewResponseHeader(t *testing.T) {
 		want *ResponseHeader
 	}{
 		{
-			name: "Should create a new response header",
+			name: "Create a new response header",
 			args: args{
 				handlerToWrap: handlerToWrap,
 				headerName:    "Content-Type",
@@ -50,7 +50,7 @@ func TestResponseHeader_ServeHTTP(t *testing.T) {
 		expectedValue string
 	}{
 		{
-			name:          "Should add header to response",
+			name:          "Add header to response",
 			headerName:    "Content-Type",
 			headerValue:   "application/json",
 			expectedValue: "application/json",

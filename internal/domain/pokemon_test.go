@@ -17,7 +17,7 @@ func TestNewPokemon(t *testing.T) {
 		want *Pokemon
 	}{
 		{
-			name: "Should create a new pokemon instance",
+			name: "Create a new pokemon instance",
 			args: args{
 				id:    1,
 				name:  "bulbasaur",

@@ -16,13 +16,13 @@ func TestLogger_ServeHTTP(t *testing.T) {
 		expectedLog string
 	}{
 		{
-			name:        "GET request",
+			name:        "Log GET request",
 			method:      "GET",
 			url:         "/test",
 			expectedLog: "GET /test",
 		},
 		{
-			name:        "POST request",
+			name:        "Log POST request",
 			method:      "POST",
 			url:         "/another",
 			expectedLog: "POST /another",
@@ -63,7 +63,7 @@ func TestNewLogger(t *testing.T) {
 		want *Logger
 	}{
 		{
-			name: "Should create a new logger instance",
+			name: "Create a new logger instance",
 			args: args{
 				handlerToWrap,
 			},

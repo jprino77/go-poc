@@ -44,7 +44,7 @@ func TestPokemonRest_GetPokemonById(t *testing.T) {
 		mock    func()
 	}{
 		{
-			name: "Given a valid pokemon id, should return a pokemon from api",
+			name: "Return a pokemon from api, when request is successful",
 			args: args{
 				id:  1,
 				ctx: context.Background(),
@@ -60,7 +60,7 @@ func TestPokemonRest_GetPokemonById(t *testing.T) {
 			},
 		},
 		{
-			name: "Should return an error when request fails",
+			name: "Returns an error when request fails",
 			args: args{
 				id:  1,
 				ctx: context.Background(),
@@ -76,7 +76,7 @@ func TestPokemonRest_GetPokemonById(t *testing.T) {
 			},
 		},
 		{
-			name: "Should return an error when parse response fails",
+			name: "Returns an error when parse response fails",
 			args: args{
 				id:  1,
 				ctx: context.Background(),

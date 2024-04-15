@@ -54,6 +54,7 @@ Esto generará un archivo `mock_service.go` en el paquete `service` que contiene
 
 - [making-and-using-http-middleware](https://www.alexedwards.net/blog/making-and-using-middleware)
 - [prefer-table-driven-tests](https://dave.cheney.net/2019/05/07/prefer-table-driven-tests)
+- [naming-test-cases](https://medium.com/getground/naming-tests-in-golang-c58c188bb9a1)
 
 ## Stack
 

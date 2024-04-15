@@ -5,7 +5,6 @@ Api rest en Go
 ## Requisitos
 
 - Go 1.22 o superior
-- Docker (si se utiliza para la base de datos u otros servicios)
 
 
 ## Uso
@@ -28,16 +27,16 @@ go test ./...
 
 ### Generar y utilizar mocks con mockgen
 
-Para generar mocks utilizando `mockgen`, primero debes instalar la herramienta:
+Para generar mocks utilizando `mockgen`, primero hay que instalar la herramienta:
 
 ```bash
 go install github.com/golang/mock/mockgen@latest
 ```
 
-Luego, puedes generar un mock para una interfaz en tu código. Por ejemplo, supongamos que tienes una interfaz `UserService` en un paquete llamado `service`:
+Luego, puedes generar un mock para una interfaz en tu código. Por ejemplo, supongamos que existe una interfaz `PokemonSrv` en un paquete llamado `domain`:
 
 ```bash
-mockgen -destination=service/mock_service.go -package=service github.com/tu-usuario/tu-app/service UserService
+mockgen -source=internal/domain/pokemon.go -destination=mocks/pokemon.go
 ```
 
 Esto generará un archivo `mock_service.go` en el paquete `service` que contiene un mock para la interfaz `UserService`. Luego, puedes utilizar este mock en tus pruebas.
